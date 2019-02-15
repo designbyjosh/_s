@@ -15,6 +15,22 @@ dst = script_dir + "/../" + name
 
 try:
     rmtree(dst)
-    copytree(src, dst, ignore=ignore_patterns('[.]*', 'setup.py', '*.pyc', 'tmp*'))
+    copytree(src, dst, ignore=ignore_patterns('[.]*', '*.png', 'setup.py', '*.pyc', 'tmp*'))
 except FileExistsError:
     print("Already exists!")
+    quit()
+
+
+
+for dname, dirs, files in os.walk(dst):
+    for fname in files:
+        fpath = os.path.join(dname, fname)
+        with open(fpath) as f:
+            s = f.read()
+        s = s.replace("'_s'", "'" + name + "'")
+        s = s.replace("_s_", name + "_")
+        s = s.replace("Text Domain: _s", "Text Domain: " + name)
+        s = s.replace(" _s", " " + name)
+        s = s.replace("_s-", name + "-")
+        with open(fpath, "w") as f:
+            f.write(s)
