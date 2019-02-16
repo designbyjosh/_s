@@ -1,4 +1,4 @@
-
+$default-transition-length: 0.5s;
 
 .site-header {
     @include xy-grid-container;
@@ -15,4 +15,15 @@
 
 .site-navigation {
     @include xy-cell( 'shrink' );
+}
+
+
+
+
+.logo {
+    transition: all $default-transition-length;
+
+    &:hover {
+        transform: scale(0.9);
+    }
 }
