@@ -1,4 +1,4 @@
-$default-transition-length: 0.5s;
+$default-transition-length: 0.25s;
 
 .site-header,
 .site-footer {
@@ -43,9 +43,15 @@ $default-transition-length: 0.5s;
     @include xy-cell( 'shrink' );
 }
 
+.site-footer {
+    a {
+        transition: all $default-transition-length;
 
-
-
+        &:hover {
+            transform: scale(0.9);
+        }
+    }
+}
 .logo {
     transition: all $default-transition-length;
 
