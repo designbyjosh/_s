@@ -12,7 +12,7 @@ services:
     volumes:
       - ./themes/:/var/www/html/wp-content/themes
       - ./plugins/:/var/www/html/wp-content/plugins
-      - uploads3:/var/www/html/wp-content/uploads
+      - uploads:/var/www/html/wp-content/uploads
 
   mysql:
     image: mysql:8.0
@@ -20,7 +20,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: example
     volumes:
-       - db3:/var/lib/mysql
+       - db:/var/lib/mysql
     command: ["mysqld", "--default-authentication-plugin=mysql_native_password"]
 
 
