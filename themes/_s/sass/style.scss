@@ -19,13 +19,14 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
 
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
+
 @import "normalize/import-now";
 
-
 @import 'foundation6/settings';
+
+@import "modules/accessibility";
+
+
 @import 'foundation';
 @import 'motion-ui';
 @import 'foundation6/components';
