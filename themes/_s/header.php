@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 
-<div class="off-canvas-wrapper">
+<div class="off-canvas-wrapper" style="padding-bottom: 20px;">
 	<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
 		
 		Off canvas menu
