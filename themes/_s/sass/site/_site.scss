@@ -1,12 +1,26 @@
 $default-transition-length: 0.5s;
 
-.site-header {
+.site-header,
+.site-footer {
     @include xy-grid-container;
 }
 
-.site-header-grid {
+.site-header-grid,
+.site-footer-grid,
+.footer-menu-grid {
     @include xy-grid;
+}
+
+.site-header-grid {
     @include flex-align($x: left, $y: bottom);
+}
+
+.site-footer-grid {
+    @include flex-align($x: center, $y: top);
+}
+
+.footer-menu-grid {
+    @include flex-align($x: center, $y: top);
 }
 
 .site-branding {
@@ -14,6 +28,18 @@ $default-transition-length: 0.5s;
 }
 
 .site-navigation {
+    @include xy-cell( 'shrink' );
+}
+
+.site-info {
+    @include xy-cell( 'full' );
+}
+
+.site-footer-nav {
+    @include xy-cell( 'full' );
+}
+
+.footer-menu {
     @include xy-cell( 'shrink' );
 }
 
