@@ -4,6 +4,10 @@ $default-transition-length: 0.25s;
     margin-top: 46px;
 }
 
+.off-canvas-content {
+    min-height: 50vh;
+}
+
 .site-header,
 .site-footer {
     @include xy-grid-container;
