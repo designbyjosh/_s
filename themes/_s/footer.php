@@ -25,7 +25,7 @@
                                 wp_nav_menu( array(
                                     'theme_location'  => 'menu-2',
                                     'menu_id'         => 'footer-menu',
-                                    'menu_class'      => 'menu simple',
+                                    'menu_class'      => 'menu',
                                     'container'       => 'div',
                                     'container_class' => 'footer-menu'
                                 ) );

@@ -43,19 +43,31 @@ $default-transition-length: 0.25s;
     @include xy-cell( 'shrink' );
 }
 
-.site-footer {
-    a {
+.footer-menu .menu {
+
+    @include breakpoint(small down) {
+        @include menu-direction(vertical);
+    }
+    @include menu-simple;
+}
+
+@include breakpoint(medium) {
+
+    .site-footer {
+        a {
+            transition: all $default-transition-length;
+
+            &:hover {
+                transform: scale(0.9);
+            }
+        }
+    }
+    .logo {
         transition: all $default-transition-length;
 
         &:hover {
             transform: scale(0.9);
         }
     }
-}
-.logo {
-    transition: all $default-transition-length;
 
-    &:hover {
-        transform: scale(0.9);
-    }
 }
