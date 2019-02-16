@@ -11,14 +11,20 @@
 
 ?>
 
-	</div><!-- #content -->
+			</div><!-- #content -->
+			<footer id="colophon" class="site-footer">
+				<div class="site-info">
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+				</div><!-- .site-info -->
+			</footer><!-- #colophon -->
+		</div><!-- #page -->
+
+
+
+	</div><!-- .off-canvas-content -->
+</div><!-- .off-canvas-wrapper -->
+
+
 
 <?php wp_footer(); ?>
 <script>
