@@ -1,0 +1,8 @@
+version: '3.1'
+
+services:
+  foundation:
+    # Go to projects/docker-foundation to build first
+    image: joshuaatkins/docker-foundation:v1.0
+    volumes:
+      - .:/app
