@@ -28,15 +28,27 @@
 		<div class="off-canvas-top">
 				<div class="off-canvas-close">
 
-					<button class="close-button hamburger--collapse is-active" type="button" aria-label="Close menu"  data-close>
+					<button class="hamburger--collapse is-active" type="button" aria-label="Close menu"  data-close>
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>
 					</button>
 
-
 				</div><!-- .off-canvas-close -->
 		</div><!-- .off-canvas-top -->
+
+		<nav class="off-canvas-nav">
+			<ul id="off-canvas-menu" class="vertical menu accordion-menu" data-accordion-menu>
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'container'		 =>  null,
+					'items_wrap' 	 => '%3$s',
+					'walker' => new Off_Canvas_Nav_Menu()
+				) );
+				?>
+			</ul>
+		</nav><!-- .off-canvas-nav -->
 
 	</div><!-- #offCanvas -->
 	<div class="off-canvas-content" data-off-canvas-content>
@@ -58,7 +70,7 @@
 								'theme_location' => 'menu-1',
 								'container'		 =>  null,
 								'items_wrap' 	 => '%3$s',
-								'walker' => new My_Walker_Nav_Menu()
+								'walker' => new Main_Nav_Menu()
 							) );
 							?>
 						</ul>

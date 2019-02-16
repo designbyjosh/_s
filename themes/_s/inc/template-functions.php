@@ -37,9 +37,16 @@ function _s_pingback_header() {
 add_action( 'wp_head', '_s_pingback_header' );
 
 
-class My_Walker_Nav_Menu extends Walker_Nav_Menu {
+class Main_Nav_Menu extends Walker_Nav_Menu {
   function start_lvl(&$output, $depth=0 , $args=array() ) {
     $indent = str_repeat("\t", $depth);
     $output .= "\n$indent<ul class=\"menu\">\n";
+  }
+}
+
+class Off_Canvas_Nav_Menu extends Walker_Nav_Menu {
+  function start_lvl(&$output, $depth=0 , $args=array() ) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "\n$indent<ul class=\"menu vertical nested\">\n";
   }
 }

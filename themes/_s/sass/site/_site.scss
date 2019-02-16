@@ -61,6 +61,7 @@ $default-transition-length: 0.25s;
 .off-canvas-top {
     @include xy-grid;
     @include flex-align($x: right, $y: middle);
+    margin-top: rem-calc(10);
 }
 .off-canvas-close {
     @include xy-cell( 'shrink' );
