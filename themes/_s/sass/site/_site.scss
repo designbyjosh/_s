@@ -1,5 +1,9 @@
 $default-transition-length: 0.25s;
 
+.admin-bar .off-canvas {
+    margin-top: 46px;
+}
+
 .site-header,
 .site-footer {
     @include xy-grid-container;
@@ -52,6 +56,16 @@ $default-transition-length: 0.25s;
 .header-info {
     order: 20;
 }
+
+
+.off-canvas-top {
+    @include xy-grid;
+    @include flex-align($x: right, $y: middle);
+}
+.off-canvas-close {
+    @include xy-cell( 'shrink' );
+}
+
 
 .site-info {
     @include xy-cell( 'full' );

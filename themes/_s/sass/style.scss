@@ -31,6 +31,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import 'motion-ui';
 @import 'foundation6/components';
 
+
+$hamburger-layer-width: 30px;
+$hamburger-layer-height: 2px;
 @import 'hamburgers';
 
 @import 'site/site';

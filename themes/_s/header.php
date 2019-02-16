@@ -25,7 +25,18 @@
 <div class="off-canvas-wrapper" style="padding-bottom: 20px;">
 	<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
 		
-		Off canvas menu
+		<div class="off-canvas-top">
+				<div class="off-canvas-close">
+
+					<button class="close-button hamburger--collapse is-active" type="button" aria-label="Close menu"  data-close>
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+
+
+				</div><!-- .off-canvas-close -->
+		</div><!-- .off-canvas-top -->
 
 	</div><!-- #offCanvas -->
 	<div class="off-canvas-content" data-off-canvas-content>
