@@ -40,17 +40,20 @@
 
 				</div><!-- .site-branding -->
 
-
-
 				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
-					?>
+					<ul id="primary-menu" class="dropdown menu" data-dropdown-menu>
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'container'		 =>  null,
+							'items_wrap' 	 => '%3$s',
+							'walker' => new My_Walker_Nav_Menu()
+						) );
+						?>
+					</ul>
 				</nav><!-- #site-navigation -->
+
+
 			</header><!-- #masthead -->
 
 
