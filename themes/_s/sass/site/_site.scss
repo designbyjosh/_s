@@ -1,0 +1,18 @@
+
+
+.site-header {
+    @include xy-grid-container;
+}
+
+.site-header-grid {
+    @include xy-grid;
+    @include flex-align($x: left, $y: bottom);
+}
+
+.site-branding {
+    @include xy-cell( 'shrink' );
+}
+
+.site-navigation {
+    @include xy-cell( 'shrink' );
+}

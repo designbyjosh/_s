@@ -34,24 +34,25 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
 			<header id="masthead" class="site-header">
+				<div class="site-header-grid">
 
+					<div class="site-branding">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-100.png" /></a>
+					</div><!-- .site-branding -->
 
-				<div class="site-branding">
-
-				</div><!-- .site-branding -->
-
-				<nav id="site-navigation" class="main-navigation">
-					<ul id="primary-menu" class="dropdown menu" data-dropdown-menu>
-						<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'container'		 =>  null,
-							'items_wrap' 	 => '%3$s',
-							'walker' => new My_Walker_Nav_Menu()
-						) );
-						?>
-					</ul>
-				</nav><!-- #site-navigation -->
+					<nav id="site-navigation" class="main-navigation">
+						<ul id="primary-menu" class="dropdown menu" data-dropdown-menu>
+							<?php
+							wp_nav_menu( array(
+								'theme_location' => 'menu-1',
+								'container'		 =>  null,
+								'items_wrap' 	 => '%3$s',
+								'walker' => new My_Walker_Nav_Menu()
+							) );
+							?>
+						</ul>
+					</nav><!-- #site-navigation -->
+				</div><!-- .site-header-grid -->
 
 
 			</header><!-- #masthead -->
