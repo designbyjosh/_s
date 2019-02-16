@@ -40,7 +40,7 @@
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-100.png" /></a>
 					</div><!-- .site-branding -->
 
-					<nav id="site-navigation" class="main-navigation">
+					<nav id="site-navigation" class="site-navigation">
 						<ul id="primary-menu" class="dropdown menu" data-dropdown-menu>
 							<?php
 							wp_nav_menu( array(
@@ -52,6 +52,18 @@
 							?>
 						</ul>
 					</nav><!-- #site-navigation -->
+
+					<div class="header-hamburger">
+						<button type="button" class="hamburger hamburger--collapse" data-toggle="offCanvas">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+					</div><!-- .header-hamburger -->
+
+					<div class="header-info">
+						Info
+					</div><!-- .header-hamburger -->
 				</div><!-- .site-header-grid -->
 
 

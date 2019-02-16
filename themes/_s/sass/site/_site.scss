@@ -12,7 +12,11 @@ $default-transition-length: 0.25s;
 }
 
 .site-header-grid {
-    @include flex-align($x: left, $y: bottom);
+    @include flex-align($x: justify, $y: middle);
+
+    @include breakpoint(medium) {
+        @include flex-align($x: left, $y: bottom);
+    }
 }
 
 .site-footer-grid {
@@ -25,10 +29,28 @@ $default-transition-length: 0.25s;
 
 .site-branding {
     @include xy-cell( 'shrink' );
+    order: 10;
+    @include breakpoint(medium) {
+        order: 1;
+    }
 }
 
 .site-navigation {
     @include xy-cell( 'shrink' );
+    order: 5;
+    @include show-for(medium);
+}
+
+.header-hamburger, .header-info {
+    @include xy-cell( 'auto' );
+    @include hide-for(medium);
+}
+.header-hamburger {
+    order: 1;
+}
+
+.header-info {
+    order: 20;
 }
 
 .site-info {
